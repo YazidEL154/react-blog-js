@@ -1,0 +1,21 @@
+.user-profile-card {
+    display: flex;
+    width: 20%;
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+
+img.user-profile-picture {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 10vw;
+}
+
+.user-profile-card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile-card-body span{
+    font-size: 0.3em;
+}
