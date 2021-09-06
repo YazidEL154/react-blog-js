@@ -1,5 +1,6 @@
 import React from 'react'
 import { ComentaryList } from '../comentaries/UserComentary'
+import { UserProfileCard } from '../users/profile/UserProfileCard'
 import './articles.css'
 
 

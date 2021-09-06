@@ -15,6 +15,6 @@ export const ComentaryItem = (props) => {
             speudo={props.auteur.speudo}
             metier={props.auteur.metier}
             imgSrc={props.auteur.imgSrc}/>
-            {props.body}
+            <p>{props.body}</p>
     </div>
 }
