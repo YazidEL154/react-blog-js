@@ -43,3 +43,5 @@ export const ArticlePostFooter = (props) => {
             width="100%"/>
     </div>
 }
+
+export const SecurityIcon = () => <img src=""/>
