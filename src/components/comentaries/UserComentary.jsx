@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { modifArticleContext } from '../../layouts/ArticleLayout'
+import { articleContext } from '../articles/ArticleList'
 
 import { UserProfileCard } from "../users/profile/UserProfileCard"
 import { CommentaireForm } from "./CommentaireForm"
@@ -7,18 +9,24 @@ export const ComentaryList = (props) => {
     return <div>
         {props.commentaires.map((com, index)=><ComentaryItem 
             key={index} 
-            auteur={com.auteur}
-            body={com.body} />)}
-        <CommentaireForm onFinish={props.onFinish}/>
+            commentaire={com} />)}
+        <CommentaireForm/>
     </div>
 }
 
 export const ComentaryItem = (props) => {
+    const {supprimerCommentaire} = useContext(modifArticleContext);
+    const currentArticle = useContext(articleContext)
+
+    const onDelete = () => {
+        supprimerCommentaire(props.commentaire, currentArticle);
+    }
     return <div className="com-item">
         <UserProfileCard
-            speudo={props.auteur.speudo}
-            metier={props.auteur.metier}
-            imgSrc={props.auteur.imgSrc}/>
-            <p>{props.body}</p>
+            speudo={props.commentaire.auteur.speudo}
+            metier={props.commentaire.auteur.metier}
+            imgSrc={props.commentaire.auteur.imgSrc}/>
+            <p>{props.commentaire.body}</p>
+            <button onClick={onDelete}>Supprimer</button>
     </div>
 }
