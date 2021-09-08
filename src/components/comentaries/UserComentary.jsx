@@ -1,4 +1,7 @@
+import React from 'react'
+
 import { UserProfileCard } from "../users/profile/UserProfileCard"
+import { CommentaireForm } from "./CommentaireForm"
 
 export const ComentaryList = (props) => {
     return <div>
@@ -6,6 +9,7 @@ export const ComentaryList = (props) => {
             key={index} 
             auteur={com.auteur}
             body={com.body} />)}
+        <CommentaireForm onFinish={props.onFinish}/>
     </div>
 }
 
