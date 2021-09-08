@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/kilrasemifir/react-blog-jf/compare/v0.1.1...v0.1.2) (2021-09-08)
+
+
+### Bug Fixes
+
+* **css:** ajout d'un espace ([525afe6](https://github.com/kilrasemifir/react-blog-jf/commit/525afe637d533ed2095ac3a30bd253adcd271a95))
+
 ### 0.1.1 (2021-09-08)
 
 
