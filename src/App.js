@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
-import { MyComponent, MyOtherComponent } from './components/MyComponent';
+import { MonComposantClass, MonComposantFonction } from './components/MyComponent';
 import { HeaderBar } from './components/header/HeaderBar';
-import { UserList } from './components/users/UserList';
 import { ArticleList } from './components/articles/ArticleList';
+import { LoginCard } from './components/login/LoginCard';
 
 function App() {
   const users = [
@@ -55,8 +54,11 @@ function App() {
   ]
   return (
     <div className="App">
-      <HeaderBar/>
-      <ArticleList articles={articles}/>
+      {/* <HeaderBar/>
+      <ArticleList articles={articles}/> */}
+      <LoginCard/>
+      <MonComposantClass message="Mon message"/>
+      <MonComposantFonction message="Mon message"/>
     </div>
   );
 }
