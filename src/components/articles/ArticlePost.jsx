@@ -1,20 +1,23 @@
 import React, { useContext } from 'react'
-import { articleContext } from '../../layouts/ArticleLayout'
+import { CRUDArticleContext } from '../../layouts/ArticleLayout'
 import { ComentaryList } from '../comentaries/UserComentary'
 import { UserProfileCard } from '../users/profile/UserProfileCard'
+import { articleContext } from './ArticleList'
 import './articles.css'
 
 
 export const ArticlePost = (props) => {
-    const context = useContext(articleContext);
+
+    const {supprimerArticle} = useContext(CRUDArticleContext)
+    const article = useContext(articleContext);
+    
 
     return <div className="article-post">
-        <ArticlePostHeader titre={props.article.titre} date={props.article.date}/>
-        <ArticlePostBody body={props.article.body}/>
-        <ArticlePostFooter auteur={props.article.auteur}/>
-        <ComentaryList 
-            commentaires={props.article.commentaires} 
-            onFinish={(com)=>context.newCom(com, props.article)}/>
+        <ArticlePostHeader titre={article.titre} date={article.date}/>
+        <ArticlePostBody body={article.body}/>
+        <ArticlePostFooter auteur={article.auteur}/>
+        <ComentaryList commentaires={article.commentaires}/>
+        <button onClick={()=>supprimerArticle(article)}>Supprimer l'article</button>
     </div>
 }
 
@@ -40,3 +43,5 @@ export const ArticlePostFooter = (props) => {
             width="100%"/>
     </div>
 }
+
+export const SecurityIcon = () => <img src=""/>

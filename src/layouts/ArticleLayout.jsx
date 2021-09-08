@@ -3,7 +3,7 @@ import { ArticleFormulaire } from '../components/articles/ArticleFormulaire';
 import { ArticleList } from '../components/articles/ArticleList';
 import { articlesSample } from '../data/articles';
 
-export const articleContext = createContext();
+export const CRUDArticleContext = createContext();
 
 export const ArticleLayout = (props) => {
   const [articles, setarticles] = useState(articlesSample);
@@ -12,7 +12,7 @@ export const ArticleLayout = (props) => {
     setarticles([...articles, article])
   }
 
-  const newCom = (com, targetArticle) => {
+  const nouveauCommentaire = (com, targetArticle) => {
     setarticles(articles.map(article =>{
         if (article === targetArticle){
             article.commentaires.push(com)
@@ -21,14 +21,30 @@ export const ArticleLayout = (props) => {
     }))
   }
 
-  const deleteArticle = (article) =>{
-      
+  const supprimerCommentaire = (commentaire, articleCible) => {
+    setarticles(articles.map(article =>{
+        if (article === articleCible){
+            article.commentaires = article.commentaires.filter(com=>com!==commentaire);
+        }
+        return article
+    }));
   }
 
+  const supprimerArticle = (articleCible) => {
+      setarticles(articles.filter(article=>article!==articleCible))
+  }
+
+  const CRUDValues = {
+      nouveauCommentaire ,
+      supprimerCommentaire,
+      supprimerArticle,
+      message:"Toto mange des"
+    }
+
   return <>
-    <articleContext.Provider value={{newCom,}}>
+    <CRUDArticleContext.Provider value={CRUDValues}>
         <ArticleList articles={articles}/>
         <ArticleFormulaire onFinish={onFinish}/>
-    </articleContext.Provider>
+    </CRUDArticleContext.Provider>
   </>
 }
