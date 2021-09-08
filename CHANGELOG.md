@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/kilrasemifir/react-blog-jf/compare/v0.1.2...v0.1.3) (2021-09-08)
+
+
+### Features
+
+* **articles:** ajout d'un bouton pour la suppression d'un article ([f6a3a0f](https://github.com/kilrasemifir/react-blog-jf/commit/f6a3a0fee1dd387e4da051bbb9346c7abf6e1c94))
+* **articles:** ajout d'un bouton pour la suppression d'un commentaire ([381dbcd](https://github.com/kilrasemifir/react-blog-jf/commit/381dbcdecdee27bee8bcb9f300641b9e9aad2cc2))
+* **articles:** ajout d'un formulaire pour l'ajout d'un commentaire sous un article ([9da347e](https://github.com/kilrasemifir/react-blog-jf/commit/9da347eb2a30f06fb6f4cbdc4d173283419f5310))
+
 ### [0.1.2](https://github.com/kilrasemifir/react-blog-jf/compare/v0.1.1...v0.1.2) (2021-09-08)
 
 
