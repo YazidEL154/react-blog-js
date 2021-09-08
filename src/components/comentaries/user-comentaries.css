@@ -1,6 +1,12 @@
 div.com-item {
     font-size: 0.5em;
     display: flex;
-    margin: 1px;
+    margin: 2px;
     border: 2px;
+    flex-direction: row;
+}
+.com-item p {
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
 }

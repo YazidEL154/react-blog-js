@@ -1,17 +1,38 @@
-import React from 'react'
+import React, { Component, useState } from 'react'
 import './MyComponent.css';
 
-export const MyComponent = () => {
-    const monMessage = "J'ai un super message";
+export class MonComposantClass extends Component {
 
-    return <>{monMessage.toUpperCase()}</>
-    
+    constructor(props){
+        super(props);
+        this.onClickMe = this.onClickMe.bind(this);
+    }
+
+    onClickMe(){
+        alert(this.props.message);
+    }
+
+    render(){
+        return <div>
+            <p>Hello Class component: {this.props.message}</p>
+            <button onClick={this.onClickMe}>Click Me!!</button>
+        </div>
+    }
 }
 
-export const MyOtherComponent = () => {
-    const style = {color:"greenyellow"};
-    return <h1 style={style} className="ma-class">
-        Hello le titre
-    </h1>
-}
+export const MonComposantFonction = (props) => {
+    const [message, setMessage] = useState(props.message);
 
+    const onClickMe = ()=>alert(message) 
+
+    const handleOnChange = (value) => {
+        console.log(value.target.value);
+        setMessage(value.target.value);
+    }
+
+    return <div>
+        <p>Hello Function Compnent: {props.message}</p>
+        <button onClick={onClickMe}>Click Me!!</button>
+        <input type="text" value={message} onChange={handleOnChange}/>
+    </div>
+}

@@ -1,0 +1,11 @@
+.form-ui-container {
+    width: 100%;
+}
+
+.ui-form-item {
+    padding: 10px;
+}
+
+.ui-form-item textarea{
+    resize: vertical;
+}
