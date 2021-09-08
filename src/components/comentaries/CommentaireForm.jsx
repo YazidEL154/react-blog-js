@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react'
-import { modifArticleContext } from '../../layouts/ArticleLayout'
+import { CRUDArticleContext } from '../../layouts/ArticleLayout'
 import { articleContext } from '../articles/ArticleList'
 import { CustomTextArea } from '../ui/CustomInput'
 
 export const CommentaireForm = (props) => {
     const [comBody, setcomBody] = useState("")
 
-    const {nouveauCommentaire} = useContext(modifArticleContext);
+    const {nouveauCommentaire} = useContext(CRUDArticleContext);
     const currentArticle = useContext(articleContext);
 
     const onFinish = () => {

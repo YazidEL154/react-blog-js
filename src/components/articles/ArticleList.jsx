@@ -10,7 +10,7 @@ export const ArticleList = (props) => {
         {props.articles ? 
             props.articles.map((article, index)=>
             <articleContext.Provider value={article}>
-                <ArticlePost index={index} article={article} newCom={props.newCom}/>
+                <ArticlePost index={index}/>
             </articleContext.Provider>)
             : <h2>Aucun Journaliste n'a voulu travailler aujourd'hui...</h2>
         }

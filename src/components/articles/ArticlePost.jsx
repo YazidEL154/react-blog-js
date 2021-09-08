@@ -1,17 +1,23 @@
 import React, { useContext } from 'react'
-import { modifArticleContext } from '../../layouts/ArticleLayout'
+import { CRUDArticleContext } from '../../layouts/ArticleLayout'
 import { ComentaryList } from '../comentaries/UserComentary'
 import { UserProfileCard } from '../users/profile/UserProfileCard'
+import { articleContext } from './ArticleList'
 import './articles.css'
 
 
 export const ArticlePost = (props) => {
 
+    const {supprimerArticle} = useContext(CRUDArticleContext)
+    const article = useContext(articleContext);
+    
+
     return <div className="article-post">
-        <ArticlePostHeader titre={props.article.titre} date={props.article.date}/>
-        <ArticlePostBody body={props.article.body}/>
-        <ArticlePostFooter auteur={props.article.auteur}/>
-        <ComentaryList commentaires={props.article.commentaires}/>
+        <ArticlePostHeader titre={article.titre} date={article.date}/>
+        <ArticlePostBody body={article.body}/>
+        <ArticlePostFooter auteur={article.auteur}/>
+        <ComentaryList commentaires={article.commentaires}/>
+        <button onClick={()=>supprimerArticle(article)}>Supprimer l'article</button>
     </div>
 }
 
