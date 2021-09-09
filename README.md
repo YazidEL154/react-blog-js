@@ -22,3 +22,8 @@ npm run start
 ```
 npm run build
 ```
+
+* Pour lancer la base de donnée json-server:
+```
+npm run start:db
+```
