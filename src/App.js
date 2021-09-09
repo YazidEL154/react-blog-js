@@ -1,7 +1,7 @@
-import { BrowserRouter, Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import { HeaderBar } from './components/header/HeaderBar';
-import { Routing } from './Routing';
+import { Routing } from './routing/Routing';
 
 function App() {
 
