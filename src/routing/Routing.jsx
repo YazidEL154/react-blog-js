@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
-import { ArticleLayout } from './layouts/ArticleLayout'
+import { ArticleLayout } from '../layouts/ArticleLayout'
+import { PageArticleFormulaire } from '../pages/PageArticleFormulaire';
 
 export const Routing = () => {
 
@@ -12,11 +13,11 @@ export const Routing = () => {
     
     return (
         <Switch>
+            <Route path="/articles/new">
+                <PageArticleFormulaire/>
+            </Route>
             <Route path="/articles">
                 <ArticleLayout/>
-            </Route>
-            <Route path="/">
-                <button onClick={versLesArticles}>Vers les articles</button>
             </Route>
         </Switch>
     )

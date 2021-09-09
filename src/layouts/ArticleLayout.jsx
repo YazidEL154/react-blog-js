@@ -22,13 +22,7 @@ export const ArticleLayout = (props) => {
     useEffect(() => {
         // code a chaque mise a jour des articles
     }, [articles])
-
-    const onFinish = (article) => {
-        articleService.save(article).then(art=>{
-            setarticles([...articles, art]);
-        })
-    }
-
+    
     const nouveauCommentaire = (com, targetArticle) => {
         setarticles(articles.map(article => {
             if (article === targetArticle) {
@@ -65,7 +59,6 @@ export const ArticleLayout = (props) => {
     return <>
         <CRUDArticleContext.Provider value={CRUDValues}>
             <ArticleList articles={articles} />
-            <ArticleFormulaire onFinish={onFinish} />
         </CRUDArticleContext.Provider>
     </>
 }

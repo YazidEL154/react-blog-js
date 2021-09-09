@@ -55,6 +55,17 @@
           "body": "Merci pour cette article incroyable! Vraiment un bon journaliste!!!"
         }
       ]
+    },
+    {
+      "titre": "Un systeme de routing!!",
+      "date": "2021-09-09T12:42:13.737Z",
+      "body": "Notre super site viens de ce mettre a jour et propose un nouveau systeme de routing pour la navigation de notre application!",
+      "auteur": {
+        "speudo": "GeGe",
+        "metier": "Raleur professionel"
+      },
+      "commentaires": [],
+      "id": 3
     }
   ]
 }
