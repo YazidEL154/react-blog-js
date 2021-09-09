@@ -1,9 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
-import { ArticleFormulaire } from '../components/articles/ArticleFormulaire';
 import { ArticleList } from '../components/articles/ArticleList';
-import { articlesSample } from '../data/articles';
 import { articleService } from '../services/ArticleService';
-import { httpService } from '../services/httpService';
 
 export const CRUDArticleContext = createContext();
 
@@ -12,7 +9,11 @@ export const ArticleLayout = (props) => {
 
     useEffect(() => {
         // Au chargement du composant
-        articleService.findAll().then(setarticles);
+        if (props.articleId){
+            articleService.findById(props.articleId).then(res=>setarticles([res]));
+        }else {
+            articleService.findAll().then(setarticles);
+        }
     }, [])
 
     useEffect(() => {
@@ -22,7 +23,7 @@ export const ArticleLayout = (props) => {
     useEffect(() => {
         // code a chaque mise a jour des articles
     }, [articles])
-    
+
     const nouveauCommentaire = (com, targetArticle) => {
         setarticles(articles.map(article => {
             if (article === targetArticle) {

@@ -16,6 +16,10 @@ class ArticleHttpService {
     async delete(article){
         return httpService.delete(`articles/${article.id}`);
     }
+
+    async findById(id){
+        return httpService.get(`articles/${id}`);
+    }
 }
 
 export const articleService = Object.freeze(new ArticleHttpService());
