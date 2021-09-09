@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/kilrasemifir/react-blog-js/compare/v0.1.9...v0.1.10) (2021-09-09)
+
+
+### Features
+
+* **article:** possibilité d'afficher un seul article avec l'url: /articles/:id ([5f1a646](https://github.com/kilrasemifir/react-blog-js/commit/5f1a64613fd275b7c03fb60921c6bbda622cb2d2))
+
 ### [0.1.9](https://github.com/kilrasemifir/react-blog-js/compare/v0.1.8...v0.1.9) (2021-09-09)
 
 
