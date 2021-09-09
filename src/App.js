@@ -1,14 +1,17 @@
+import { BrowserRouter, Router } from 'react-router-dom';
 import './App.css';
 import { HeaderBar } from './components/header/HeaderBar';
-import { ArticleLayout } from './layouts/ArticleLayout';
+import { Routing } from './Routing';
 
 function App() {
 
   return (
-    <div className="App">
-      <HeaderBar/>
-      <ArticleLayout/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <HeaderBar/>
+        <Routing/>
+      </div>
+    </BrowserRouter>
   );
 }
 
