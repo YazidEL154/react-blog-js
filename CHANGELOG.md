@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/kilrasemifir/react-blog-jf/compare/v0.1.4...v0.1.5) (2021-09-09)
+
+
+### Features
+
+* **articles:** La suppression d'un article est aussi enregistré dans json-server ([c172703](https://github.com/kilrasemifir/react-blog-jf/commit/c172703172f052631d9656d57826e8887cb080fd))
+* **articles:** Sauvegarde des nouveau commentaires dans json-server ([fd68a0a](https://github.com/kilrasemifir/react-blog-jf/commit/fd68a0ab2628091c4f6915a61ca682996d32a136))
+
 ### [0.1.4](https://github.com/kilrasemifir/react-blog-jf/compare/v0.1.3...v0.1.4) (2021-09-09)
 
 
