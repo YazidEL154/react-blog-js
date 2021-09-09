@@ -43,13 +43,16 @@ export const ArticleLayout = (props) => {
         setarticles(articles.map(article => {
             if (article === articleCible) {
                 article.commentaires = article.commentaires.filter(com => com !== commentaire);
+                articleService.update(article);
             }
             return article
         }));
     }
 
     const supprimerArticle = (articleCible) => {
-        setarticles(articles.filter(article => article !== articleCible))
+        articleService.delete(articleCible).then(()=>
+            setarticles(articles.filter(article => article.id !== articleCible.id))
+        )
     }
 
     const CRUDValues = {
