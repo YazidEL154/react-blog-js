@@ -11,6 +11,7 @@ export const ArticleLayout = (props) => {
     const [articles, setarticles] = useState([]);
 
     useEffect(() => {
+        // Au chargement du composant
         articleService.findAll().then(setarticles);
     }, [])
 
@@ -24,7 +25,6 @@ export const ArticleLayout = (props) => {
 
     const onFinish = (article) => {
         articleService.save(article).then(art=>{
-            console.log(art)
             setarticles([...articles, art]);
         })
     }
