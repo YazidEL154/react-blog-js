@@ -3,6 +3,7 @@ import { ArticleFormulaire } from '../components/articles/ArticleFormulaire';
 import { ArticleList } from '../components/articles/ArticleList';
 import { articlesSample } from '../data/articles';
 import { articleService } from '../services/ArticleService';
+import { httpService } from '../services/httpService';
 
 export const CRUDArticleContext = createContext();
 
@@ -32,6 +33,7 @@ export const ArticleLayout = (props) => {
         setarticles(articles.map(article => {
             if (article === targetArticle) {
                 article.commentaires.push(com)
+                articleService.update(article);
             }
             return article
         }))

@@ -10,8 +10,23 @@ class HttpService {
         .then(res=>res.json())
     }
 
+    async delete(path){
+        return fetch(`${this.baseurl}/${path}`, {method:"DELETE",headers:this.headers})
+        .then(res=>res.json())
+    }
+
     async post(path, body){
         return fetch(`${this.baseurl}/${path}`, {method:"POST", body:JSON.stringify(body), headers:this.headers})
+        .then(res=>res.json())
+    }
+
+    async put(path, body){
+        return fetch(`${this.baseurl}/${path}`, {method:"PUT", body:JSON.stringify(body), headers:this.headers})
+        .then(res=>res.json())
+    }
+
+    async patch(path, body){
+        return fetch(`${this.baseurl}/${path}`, {method:"Patch", body:JSON.stringify(body), headers:this.headers})
         .then(res=>res.json())
     }
 }

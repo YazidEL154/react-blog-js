@@ -64,7 +64,16 @@
         "speudo": "GeGe",
         "metier": "Raleur professionel"
       },
-      "commentaires": [],
+      "commentaires": [
+        {
+          "auteur": {},
+          "body": "eazeazeaze"
+        },
+        {
+          "auteur": {},
+          "body": "azeazfazdaz"
+        }
+      ],
       "id": 3
     }
   ]
