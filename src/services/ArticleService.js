@@ -8,6 +8,14 @@ class ArticleHttpService {
     async save(article) {
         return httpService.post('articles', article);
     }
+
+    async update(article){
+        return httpService.put(`articles/${article.id}`, article);
+    }
+
+    async delete(article){
+        return httpService.delete(`articles/${article.id}`);
+    }
 }
 
 export const articleService = Object.freeze(new ArticleHttpService());
