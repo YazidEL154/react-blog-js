@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/kilrasemifir/react-blog-js/compare/v0.1.8...v0.1.9) (2021-09-09)
+
+
+### Features
+
+* **routing:** ajout d'un nouveau bouton pour la navigation vers le formulaire des articles ([dc7caeb](https://github.com/kilrasemifir/react-blog-js/commit/dc7caeb04279bab251b7bd84db94ff2961d7938c))
+
 ### [0.1.8](https://github.com/kilrasemifir/react-blog-js/compare/v0.1.7...v0.1.8) (2021-09-09)
 
 ### [0.1.7](https://github.com/kilrasemifir/react-blog-js/compare/v0.1.6...v0.1.7) (2021-09-09)
