@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/kilrasemifir/react-blog-jf/compare/v0.1.3...v0.1.4) (2021-09-09)
+
+
+### Features
+
+* **articles:** Connexion avec un json-serveur pour l'ajout d'un article et la récupération de l'ensemble ([16f0c24](https://github.com/kilrasemifir/react-blog-jf/commit/16f0c2423c287ad17602cdbee751d659461dd77b))
+
 ### [0.1.3](https://github.com/kilrasemifir/react-blog-jf/compare/v0.1.2...v0.1.3) (2021-09-08)
 
 
